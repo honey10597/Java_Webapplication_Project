@@ -190,8 +190,8 @@ th
                 </tr>
                 <tr>
                     <th>
-                        <a href="index.html"><button type="submit" id="sub" align="left">Submit</button></a>
-                        <a href="index.html"><input type="button" id="can" value="cancel" align="right"></a>
+                        <a href="index1.jsp"><button type="submit" id="sub" align="left">Submit</button></a>
+                        <a href="index1.jsp"><input type="button" id="can" value="cancel" align="right"></a>
                     </th>
                 </tr>
             </table>

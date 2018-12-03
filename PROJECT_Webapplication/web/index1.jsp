@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,6 @@ font-family: "Helvetica Neue", Helvetica, sans-serif;
 color: #444;   
 -webkit-font-smoothing: antialiased; 
    border-radius: 25px;
-  
 background-image:url("dotted_2.jpg");
 background-size: 1400px 650px;
 background-repeat: no-repeat;
@@ -40,7 +40,7 @@ border-radius:8px;
 border: 1px #F00 solid;
 border-color: black;
 width: 375px;
-height: 380px;
+height: 435px;
 margin-left:230px;
 margin-top: 38px;
 padding-top: 0.35em;
@@ -123,9 +123,30 @@ button[type=submit],input[type=button] {
     width: 50%;
 }
 </style>
-
+<script type="text/javascript">
+    <% 
+        try{
+        if(request.getSession().getAttribute("isLoggedIn").equals("true"))
+    {
+        response.sendRedirect("home.jsp");
+    }
+    else
+    {
+        response.sendRedirect("index1.jsp");
+    }
+        } catch(Exception e)
+        {
+            System.out.println(e);
+        }
+        
+    %>
+</script>
 </head>
-<body > 
+<body> 
+   
+    
+    
+    
     <div id="heading_tag">
 <h1 align="center" ><i><font face=""  size="300" color="black" style="comic sans MS">STUDENT & ASSESMENT MANAGEMENT</font></i></h1>
     </div>
@@ -162,9 +183,15 @@ button[type=submit],input[type=button] {
                     <a href="signup.jsp"><input type="button" value="Register"></a>
                 </th>
             </tr>
+            <tr>
+                <th>
+                    <a href="forgot_password.jsp"><input type="button" value="forgot password"></a>
+                </th>
+            </tr>
         </table>
         </fieldset>
     </form>
 </div>
+    
 </body>
 </html>

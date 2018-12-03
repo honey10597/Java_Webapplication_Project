@@ -87,6 +87,10 @@ public class FacultyDAO {
         
     }
 
+    public boolean update(String Email, String Password, String User) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
 }

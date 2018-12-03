@@ -34,7 +34,7 @@ public class logout extends HttpServlet {
             
         HttpSession hs = request.getSession(false); // do not make new session
         hs.invalidate();
-        response.sendRedirect("index.html");
+        response.sendRedirect("index1.jsp");
         out.print("You are successfully logged out!");  
     }
 

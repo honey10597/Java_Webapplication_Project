@@ -20,34 +20,7 @@ public class adminDAO {
     public boolean validate(String Email,String Password,String User)
     {
         String url="jdbc:mysql://localhost:3306/project?user=root&password=123456&useSSL=false";
-       if(User.equals("Admin"))
-       {
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con=DriverManager.getConnection(url);
-            String query="select * from admin where email=? AND password=? AND user=?";
-            PreparedStatement pstmt=con.prepareStatement(query);
-            pstmt.setString(1, Email);
-            pstmt.setString(2,Password);
-            pstmt.setString(3,User);
-            ResultSet rs=pstmt.executeQuery();
-            if(rs.next())
-            {
-                name=rs.getString(3);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            
-        }
-        catch(Exception e)
-        {
-            System.out.println(e);
-        }
-       }
-       else if(User.equals("Student"))
+       if(User.equals("Student"))
        {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -94,7 +67,6 @@ public class adminDAO {
             {
                 return false;
             }
-            
         }
         catch(Exception e)
         {

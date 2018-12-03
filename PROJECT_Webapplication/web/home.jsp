@@ -76,8 +76,9 @@ a{text-decoration: none;}
                   <% if(request.getSession().getAttribute("Name")==null)
                   {
                       System.out.println("alert('you are not logged in');");
-                      response.sendRedirect("index.html");
-                  }%>
+                      response.sendRedirect("index1.jsp");
+                  }
+                  %>
                   <p align="right"><font face="sitka small" size="3">Welcome <%=session.getAttribute("Name")%></font></p> 
             </div>
         </div>
@@ -111,9 +112,6 @@ a{text-decoration: none;}
             <div id="frame_container">
                 <iframe height="700px" width="100%" src="home_1.jsp" name="iframe"></iframe>
             </div>
-      
-    
-   
  </body>
 </head>
 </html>

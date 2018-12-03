@@ -50,6 +50,7 @@ public class login extends HttpServlet {
             session.setAttribute("Name",adao.getName());
             session.setAttribute("User",adao.getUser());
             session.setAttribute("std", std);
+            session.setAttribute("isLoggedIn","true");
             out.println("<script>");
             out.println("alert('Login Successful');");
             out.println("location='home.jsp';");
@@ -60,7 +61,7 @@ public class login extends HttpServlet {
         {
             out.println("<script>");
             out.println("alert('Invalid ')");
-            out.println("location ='index.html';");
+            out.println("location ='index1.jsp';");
             out.println("</script>");
         }
     }

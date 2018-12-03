@@ -4,6 +4,10 @@
     Author     : Honey
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -46,12 +50,10 @@ table{
             </tr>
             <tr>
                 <th>S no.</th>
-                <th>Course Credits</th>
-                <th>Course Type</th>
-                <th>Course Code</th>
+                <th>Course Name</th>
                 <th>Marks</th>
             </tr>
-        <%--
+        
         <% 
             
             try{
@@ -59,7 +61,7 @@ table{
               Class.forName("com.mysql.cj.jdbc.Driver");
               String url="jdbc:mysql://localhost:3306/project?user=root&password=123456&useSSL=false";
               Connection con=DriverManager.getConnection(url);  
-              String q="select * from course";
+              String q="select * from marks";
               PreparedStatement pstmt=con.prepareStatement(q);
              
               ResultSet rs=pstmt.executeQuery();
@@ -72,10 +74,7 @@ table{
                         <td><%=rs.getString(2)%></td>
                     
                         <td><%=rs.getString(3)%></td>
-                   
-                        <td><%=rs.getString(4)%></td>
-                        
-                        <td><%=rs.getString(5)%></td>
+   
                     </tr>
         <%
                 }
@@ -88,7 +87,7 @@ table{
                 System.out.println(e);
             }
             %>
-       --%>
+       
             
             </table>
         </div>
