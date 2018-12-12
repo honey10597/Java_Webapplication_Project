@@ -1,1 +1,1 @@
-Online Student & Assessment Management
+Online Student & Assessment Management System
